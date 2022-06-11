@@ -49,7 +49,7 @@ class _AuthorisationPageState extends State<AuthorisationPage> {
                           TextFormField(
                             autovalidateMode: AutovalidateMode.onUserInteraction,
                             validator: (text) {
-                              if (text != null && text.length <= 3) {
+                              if (text != null && text.length < 3) {
                                 return S.of(context).inputErrorLoginIsShort;
                               } else {
                                 return null;
@@ -74,7 +74,7 @@ class _AuthorisationPageState extends State<AuthorisationPage> {
                           TextFormField(
                             autovalidateMode: AutovalidateMode.onUserInteraction,
                             validator: (text) {
-                              if (text != null && text.length <= 8) {
+                              if (text != null && text.length < 8) {
                                 return S.of(context).inputErrorPasswordIsShort;
                               } else {
                                 return null;
